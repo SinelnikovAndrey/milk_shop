@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "160040049160",
+    "project_id": "grocery-mashinin",
+    "storage_bucket": "grocery-mashinin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160040049160:android:c2bc6ff8b49122d8c30fbd",
+        "android_client_info": {
+          "package_name": "com.sinelnikov.grocery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160040049160-0binaevt33hq6do0uukm5lqt9obmvv25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sinelnikov.grocery",
+            "certificate_hash": "e45ad81b729bd97e5812146a2fcbaf48146b96d7"
+          }
+        },
+        {
+          "client_id": "160040049160-tclc9omaepan59gb010nkgl1o0ufdhoq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDdo70uQWrppoG1v7wvUXO6dquQAAqpDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160040049160-tclc9omaepan59gb010nkgl1o0ufdhoq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "160040049160-n7j4mioj6l3etugrhad7p9btkmedim9n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sinelnikov.grocery"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
