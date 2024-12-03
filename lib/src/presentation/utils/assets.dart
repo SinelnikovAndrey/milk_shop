@@ -24,6 +24,8 @@ class SvgAssets {
   static const String shop = '${_basePath}shop.svg';
   static const String success = '${_basePath}success.svg';
   static const String user = '${_basePath}user.svg';
+  static const String logo = '${_basePath}logo.svg';
+  
 }
 
 class PngAssets {
@@ -31,4 +33,5 @@ class PngAssets {
   static const String fail = '${_basePath}fail.png';
   static const String mask = '${_basePath}mask.png';
   static const String onboarding = '${_basePath}onboarding.png';
+  static const String logo = '${_basePath}logo.png';
 }

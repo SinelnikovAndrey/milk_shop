@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -65,13 +62,23 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAcLhceAX5V6UClMXQZNyONaItMbMuL7Ok',
-    appId: '1:160040049160:ios:c58f8263b0bd3e93c30fbd',
+    appId: '1:160040049160:ios:a4360550d7cece35c30fbd',
     messagingSenderId: '160040049160',
     projectId: 'grocery-mashinin',
     storageBucket: 'grocery-mashinin.appspot.com',
     androidClientId: '160040049160-0binaevt33hq6do0uukm5lqt9obmvv25.apps.googleusercontent.com',
-    iosClientId: '160040049160-n7j4mioj6l3etugrhad7p9btkmedim9n.apps.googleusercontent.com',
-    iosBundleId: 'com.sinelnikov.grocery',
+    iosClientId: '160040049160-qm7utki2bns7tjlg9dstabcip5elivp0.apps.googleusercontent.com',
+    iosBundleId: 'com.sinelnikov.groceryMashinin',
   );
 
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAcLhceAX5V6UClMXQZNyONaItMbMuL7Ok',
+    appId: '1:160040049160:ios:a4360550d7cece35c30fbd',
+    messagingSenderId: '160040049160',
+    projectId: 'grocery-mashinin',
+    storageBucket: 'grocery-mashinin.appspot.com',
+    androidClientId: '160040049160-0binaevt33hq6do0uukm5lqt9obmvv25.apps.googleusercontent.com',
+    iosClientId: '160040049160-qm7utki2bns7tjlg9dstabcip5elivp0.apps.googleusercontent.com',
+    iosBundleId: 'com.sinelnikov.groceryMashinin',
+  );
 }

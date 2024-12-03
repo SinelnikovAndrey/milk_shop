@@ -66,25 +66,8 @@ class _ShopPageState extends State<ShopPage> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // logo
-            SvgPicture.asset(SvgAssets.carrot, height: 40, width: 40),
-            // location
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 25),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.center,
-            //     children: [
-            //       SvgPicture.asset(SvgAssets.location),
-            //       const SizedBox(width: 5),
-            //       Text(
-            //         '${address.city}, ${address.country}',
-            //         style: const TextStyle(
-            //           fontSize: 18,
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
+            SvgPicture.asset(SvgAssets.logo, height: 70, width: 70),
+     
           ],
         ),
       ),
@@ -111,99 +94,99 @@ class _ShopPageState extends State<ShopPage> {
               ),
               const SizedBox(height: 20),
               // banner
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
-                child: CarouselWithIndicator(),
-              ),
-              const SizedBox(height: 30),
+              // const Padding(
+              //   padding: EdgeInsets.symmetric(horizontal: 25),
+              //   child: CarouselWithIndicator(),
+              // ),
+              // const SizedBox(height: 30),
               // exclusive offer
-              if (state.exclusiveProducts.isNotEmpty) ...[
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Exclusive Offer',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text('See All'),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 20),
-                SizedBox(
-                  height: 250,
-                  child: ListView.builder(
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: state.exclusiveProducts.length,
-                    itemBuilder: (context, index) {
-                      return Row(
-                        children: [
-                          ProductCard(
-                            product: state.exclusiveProducts[index],
-                          ),
-                          // if not last item
-                          if (index != state.exclusiveProducts.length - 1)
-                            const SizedBox(width: 20),
-                        ],
-                      );
-                    },
-                  ),
-                ),
-                const SizedBox(height: 30),
-              ],
+              // if (state.exclusiveProducts.isNotEmpty) ...[
+              //   Padding(
+              //     padding: const EdgeInsets.symmetric(horizontal: 25),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //       children: [
+              //         const Text(
+              //           'Exclusive Offer',
+              //           style: TextStyle(
+              //             fontSize: 24,
+              //             fontWeight: FontWeight.bold,
+              //           ),
+              //         ),
+              //         TextButton(
+              //           onPressed: () {},
+              //           child: const Text('See All'),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              //   const SizedBox(height: 20),
+              //   SizedBox(
+              //     height: 250,
+              //     child: ListView.builder(
+              //       padding: const EdgeInsets.symmetric(horizontal: 25),
+              //       scrollDirection: Axis.horizontal,
+              //       itemCount: state.exclusiveProducts.length,
+              //       itemBuilder: (context, index) {
+              //         return Row(
+              //           children: [
+              //             ProductCard(
+              //               product: state.exclusiveProducts[index],
+              //             ),
+              //             // if not last item
+              //             if (index != state.exclusiveProducts.length - 1)
+              //               const SizedBox(width: 20),
+              //           ],
+              //         );
+              //       },
+              //     ),
+              //   ),
+              //   const SizedBox(height: 30),
+              // ],
               // best selling
-              if (state.bestSellingProducts.isNotEmpty) ...[
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Best Selling',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text('See All'),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 20),
-                SizedBox(
-                  height: 250,
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.symmetric(horizontal: 25),
-                    itemCount: state.bestSellingProducts.length,
-                    itemBuilder: (context, index) {
-                      return Row(
-                        children: [
-                          ProductCard(
-                            product: state.bestSellingProducts[index],
-                          ),
-                          // if not last item
-                          if (index != state.bestSellingProducts.length - 1)
-                            const SizedBox(width: 15),
-                        ],
-                      );
-                    },
-                  ),
-                ),
-                const SizedBox(height: 30),
-              ],
+              // if (state.bestSellingProducts.isNotEmpty) ...[
+              //   Padding(
+              //     padding: const EdgeInsets.symmetric(horizontal: 25),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //       children: [
+              //         const Text(
+              //           'Best Selling',
+              //           style: TextStyle(
+              //             fontSize: 24,
+              //             fontWeight: FontWeight.bold,
+              //           ),
+              //         ),
+              //         TextButton(
+              //           onPressed: () {},
+              //           child: const Text('See All'),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              //   const SizedBox(height: 20),
+              //   SizedBox(
+              //     height: 250,
+              //     child: ListView.builder(
+              //       scrollDirection: Axis.horizontal,
+              //       padding: const EdgeInsets.symmetric(horizontal: 25),
+              //       itemCount: state.bestSellingProducts.length,
+              //       itemBuilder: (context, index) {
+              //         return Row(
+              //           children: [
+              //             ProductCard(
+              //               product: state.bestSellingProducts[index],
+              //             ),
+              //             // if not last item
+              //             if (index != state.bestSellingProducts.length - 1)
+              //               const SizedBox(width: 15),
+              //           ],
+              //         );
+              //       },
+              //     ),
+              //   ),
+              //   const SizedBox(height: 30),
+              // ],
               // stores
               if (state.stores.isNotEmpty) ...[
                 Padding(
@@ -212,7 +195,7 @@ class _ShopPageState extends State<ShopPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        'Stores',
+                        'Категории',
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,

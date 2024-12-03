@@ -5,20 +5,20 @@ class Store extends Equatable {
   final String name;
   final String? description;
   final String? image;
-  final DateTime createdAt;
-  final DateTime updatedAt;
-  final num latitude;
-  final num longitude;
+  // final DateTime createdAt;
+  // final DateTime updatedAt;
+  // final num latitude;
+  // final num longitude;
 
   const Store({
     this.id,
     required this.name,
     this.description,
     this.image,
-    required this.createdAt,
-    required this.updatedAt,
-    required this.latitude,
-    required this.longitude,
+    // required this.createdAt,
+    // required this.updatedAt,
+    // required this.latitude,
+    // required this.longitude,
   });
 
   Store copyWith({
@@ -26,20 +26,20 @@ class Store extends Equatable {
     String? name,
     String? description,
     String? image,
-    DateTime? createdAt,
-    DateTime? updatedAt,
-    num? latitude,
-    num? longitude,
+    // DateTime? createdAt,
+    // DateTime? updatedAt,
+    // num? latitude,
+    // num? longitude,
   }) {
     return Store(
       id: id ?? this.id,
       name: name ?? this.name,
       description: description ?? this.description,
       image: image ?? this.image,
-      createdAt: createdAt ?? this.createdAt,
-      updatedAt: updatedAt ?? this.updatedAt,
-      latitude: latitude ?? this.latitude,
-      longitude: longitude ?? this.longitude,
+      // createdAt: createdAt ?? this.createdAt,
+      // updatedAt: updatedAt ?? this.updatedAt,
+      // latitude: latitude ?? this.latitude,
+      // longitude: longitude ?? this.longitude,
     );
   }
 
@@ -48,10 +48,10 @@ class Store extends Equatable {
       'name': name,
       'description': description,
       'image': image,
-      'createdAt': createdAt.millisecondsSinceEpoch,
-      'updatedAt': updatedAt.millisecondsSinceEpoch,
-      'latitude': latitude,
-      'longitude': longitude,
+      // 'createdAt': createdAt.millisecondsSinceEpoch,
+      // 'updatedAt': updatedAt.millisecondsSinceEpoch,
+      // 'latitude': latitude,
+      // 'longitude': longitude,
     };
   }
 
@@ -60,23 +60,23 @@ class Store extends Equatable {
       name: map['name'] as String,
       description: map['description'],
       image: map['image'],
-      createdAt: DateTime.fromMillisecondsSinceEpoch(map['createdAt'] as int),
-      updatedAt: DateTime.fromMillisecondsSinceEpoch(map['updatedAt'] as int),
-      latitude: map['latitude'] as num,
-      longitude: map['longitude'] as num,
+      // createdAt: DateTime.fromMillisecondsSinceEpoch(map['createdAt'] as int),
+      // updatedAt: DateTime.fromMillisecondsSinceEpoch(map['updatedAt'] as int),
+      // latitude: map['latitude'] as num,
+      // longitude: map['longitude'] as num,
     );
   }
 
   factory Store.empty() {
-    return Store(
+    return const Store(
       id: null,
       name: '',
       description: '',
       image: '',
-      createdAt: DateTime.now(),
-      updatedAt: DateTime.now(),
-      latitude: 0.0,
-      longitude: 0.0,
+      // createdAt: DateTime.now(),
+      // updatedAt: DateTime.now(),
+      // latitude: 0.0,
+      // longitude: 0.0,
     );
   }
 
@@ -86,9 +86,9 @@ class Store extends Equatable {
         name,
         description,
         image,
-        createdAt,
-        updatedAt,
-        latitude,
-        longitude,
+        // createdAt,
+        // updatedAt,
+        // latitude,
+        // longitude,
       ];
 }

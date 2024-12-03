@@ -173,24 +173,25 @@ class StoreAdapter extends TypeAdapter<Store> {
   Store read(BinaryReader reader) {
     return Store(
       name: reader.read(),
-      latitude: reader.read(),
-      longitude: reader.read(),
       description: reader.read(),
       image: reader.read(),
-      createdAt: reader.read(),
-      updatedAt: reader.read(),
+      // latitude: reader.read(),
+      // longitude: reader.read(),
+      // createdAt: reader.read(),
+      // updatedAt: reader.read(),
     );
   }
 
   @override
   void write(BinaryWriter writer, Store obj) {
     writer.write(obj.name);
-    writer.write(obj.latitude);
-    writer.write(obj.longitude);
+    
     writer.write(obj.description);
     writer.write(obj.image);
-    writer.write(obj.createdAt);
-    writer.write(obj.updatedAt);
+    // writer.write(obj.latitude);
+    // writer.write(obj.longitude);
+    // writer.write(obj.createdAt);
+    // writer.write(obj.updatedAt);
   }
 }
 

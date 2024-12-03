@@ -175,45 +175,6 @@ class StoreDetailsBody extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                // location
-                Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: SvgPicture.asset(
-                        SvgAssets.location,
-                        colorFilter: const ColorFilter.mode(
-                          AppColors.primary,
-                          BlendMode.srcIn,
-                        ),
-                      ),
-                    ),
-                    BlocBuilder<StoreDetailsBloc, StoreDetailsState>(
-                      builder: (context, state) {
-                        return IconButton(
-                          onPressed: () {
-                            context.read<StoreDetailsBloc>().add(
-                                  UpdateFavorite(
-                                    store: store,
-                                    isFavorite:
-                                        !StoreDetailsRepository.isFavorite(
-                                      store,
-                                    ),
-                                  ),
-                                );
-                          },
-                          iconSize: 30,
-                          icon: StoreDetailsRepository.isFavorite(store)
-                              ? const Icon(
-                                  Icons.favorite,
-                                  color: AppColors.primary,
-                                )
-                              : SvgPicture.asset(SvgAssets.favorite),
-                        );
-                      },
-                    ),
-                  ],
-                ),
               ],
             ),
           ),

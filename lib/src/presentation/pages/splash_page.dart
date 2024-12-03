@@ -17,7 +17,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     // after 1 seconds, navigate to onboarding page
     Future.delayed(
-      const Duration(seconds: 1),
+      const Duration(seconds: 5),
       () => Navigator.pushReplacementNamed(
         context,
         isUserRegistered() ? AppRouter.homeRoute : AppRouter.onboardingRoute,
@@ -31,38 +31,30 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: AppColors.primary,
       body: Center(
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              SvgAssets.carrot,
-              colorFilter: const ColorFilter.mode(
-                Colors.white,
-                BlendMode.srcIn,
+            
+            SizedBox(width: 200, height: 200,
+              child: Image.asset(
+                PngAssets.logo,
+              ),),
+            const SizedBox(width: 18),
+            const Text(
+              'Ферма',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 64,
+                fontWeight: FontWeight.w600,
               ),
             ),
-            const SizedBox(width: 18),
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'nectar',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 64,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-                Text(
-                  'online groceries',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
+            const Text(
+              'Машининых',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 34,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
